@@ -13,20 +13,16 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-IUSE="+initramfs test"
-
-pkg_pretend() {
-	use initramfs && mount-boot_pkg_pretend
-}
+S="${WORKDIR}"
 
 pkg_preinst() {
 	# Make sure /boot is available if needed.
-	use initramfs && mount-boot_pkg_preinst
+	mount-boot_pkg_preinst
 }
 
 pkg_postinst() {
 	# Don't forget to umount /boot if it was previously mounted by us.
-	use initramfs && mount-boot_pkg_postinst
+	mount-boot_pkg_postinst
 }
 
 src_install() {
