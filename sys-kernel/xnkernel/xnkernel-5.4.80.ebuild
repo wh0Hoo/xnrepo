@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-IUSE=+initramfs test
+IUSE="+initramfs test"
 
 pkg_pretend() {
 	use initramfs && mount-boot_pkg_pretend
