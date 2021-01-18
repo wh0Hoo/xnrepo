@@ -13,6 +13,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
+pkg_pretend() {
+	use initramfs && mount-boot_pkg_pretend
+}
+
 pkg_preinst() {
 	# Make sure /boot is available if needed.
 	use initramfs && mount-boot_pkg_preinst
