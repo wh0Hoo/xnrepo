@@ -7,7 +7,7 @@ inherit mount-boot
 
 DESCRIPTION="XNSYSTEMS Kernel"
 HOMEPAGE="https://github.com/wh0Hoo/xn-repository"
-SRC_URI="https://github.com/wh0Hoo/xn-repository/blob/master/kernel/xnimage-${PV}.tar.xz"
+SRC_URI="https://github.com/wh0Hoo/xn-repository/raw/master/kernel/xnimage-${PV}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
